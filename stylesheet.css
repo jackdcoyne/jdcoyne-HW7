@@ -25,7 +25,7 @@ h1 {
 /* Button styling */
 button {
     background-color: #5cb85c; /* Green, for example */
-    color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
@@ -106,24 +106,26 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-/* Legend Style */
-legend {
+/* Legend and Label Style */
+legend, label {
     font-weight: bold;
-    display: block;
     font-size: 1em;
     color: #333;
 }
 
-/* Adjusting label spacing */
-label {
-    padding: 2px 0;
+label span {
+    font-weight: normal;
 }
 
-/* Adjusting spacing for radio buttons and checkboxes */
-input[type="radio"],
-input[type="checkbox"] {
+/* Specific styles for radio buttons and checkboxes */
+form input[type="radio"],
+form input[type="checkbox"] {
     margin-right: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+form label {
+    margin-bottom: 5px; /* Reduced space between each label */
 }
 
 /* Fieldset styles */
@@ -155,6 +157,7 @@ span.required {
     font-style: italic;
     margin-left: 5px;
     font-size: 0.8em;
+    background-color: #f4f4f4; /* Light grey background for contrast */
 }
 
 .survey-image, .survey-image2{
