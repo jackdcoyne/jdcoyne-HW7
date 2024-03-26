@@ -153,7 +153,7 @@ fieldset {
 
 /* Style for 'required' span next to certain questions */
 span.required {
-    color: #d9534f; /* Red color to highlight 'required' */
+    color: #BB0000; /* Red color to highlight 'required' */
     font-style: italic;
     margin-left: 5px;
     font-size: 0.8em;
