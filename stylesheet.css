@@ -1,12 +1,165 @@
-.page_number {
-    float: left;
+/* Base reset for consistent styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* Body styling */
+body {
+    background-color: #f4f4f4; /* Light grey background */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Dark grey text color for readability */
+    padding: 20px;
+}
+
+/* Header styles */
+h1 {
+    margin-bottom: 1em;
+    color: #2a2a2a; /* Slightly darker grey for headings */
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    background-color: #5cb85c; /* Green, for example */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #449d44; /* Darker green on hover */
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.page_number, .next_button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Layout styles */
 .next_button {
-    float:right;
+    float: right;
     margin-right: 20px;
 }
 
-footer {
+/* Float clear fix */
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* Indicates a tooltip */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #f8f8f8;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Form element styles */
+input[type="text"],
+select,
+textarea,
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Legend Style */
+legend {
+    font-weight: bold;
+    display: block;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Adjusting label spacing */
+label {
+    padding: 2px 0;
+}
+
+/* Adjusting spacing for radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+/* Fieldset styles */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Centering content for specific pages */
+.center-content {
+    text-align: center;
+}
+
+.center-content p {
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the thumbs-up icon on the thank you page */
+.fa-thumbs-up {
+    color: #028051; /* Green color for the thumbs-up icon */
+    margin-left: 10px;
+}
+
+/* Style for 'required' span next to certain questions */
+span.required {
+    color: #d9534f; /* Red color to highlight 'required' */
+    font-style: italic;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.survey-image, .survey-image2{
+    max-width: 50%; /* ensures the image is not wider than its container */
+    height: auto; /* keeps the aspect ratio of the image */
+    display: block; /* prevents inline default behavior */
+    margin: 0 auto; /* centers the image within its container */
 }

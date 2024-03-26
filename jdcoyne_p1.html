@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Survey | Page 1</title>
+    <script src="https://kit.fontawesome.com/b7b17000e1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -11,19 +13,23 @@
     <main>
         <form>
             <fieldset>
+                <legend>My home country is</legend>
                 <label for="country">
-                    My home country is
                     <input type="text" id="country" autofocus>
                 </label>
                 <br>
+            </fieldset>
+            <fieldset>
+                <legend>My hometown is <span class="required">required</span></legend>
                 <label for="hometown">
-                    My home town is
                     <input type="text" id="hometown" required>
                 </label>
                 <br>
+            </fieldset>
+            <fieldset>
+                <legend>My home state is <span class="required">required</span></legend>
                 <label for="state">
-                    My home state is
-                    <select name="state" id="state">
+                    <select name="state" id="state" required>
                         <option value="" selected>-- choose state/territory --</option>
                         <option value="">-- choose state/territory --</option>
                         <option value="AL">AL</option>
@@ -87,8 +93,10 @@
                     </select>
                 </label>
                 <br>
+            </fieldset>
+            <fieldset>
+                <legend>My impression of the University of Iowa is <span class="required">required</span></legend>
                 <label for="impression"> 
-                    My impression of the BAIS major is
                     <select name="impression" id="impression" required>
                         <option value="" selected>Choose one ...</option>
                         <option value="5">Very Positive</option>
